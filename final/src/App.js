@@ -3,39 +3,22 @@ import React, { useState } from 'react';
 export default function App() {
 	const questions = [
 		{
-			questionText: 'What is the capital of France?',
+			questionText: 'Select your race',
 			answerOptions: [
-				{ answerText: 'New York', isCorrect: false },
-				{ answerText: 'London', isCorrect: false },
-				{ answerText: 'Paris', isCorrect: true },
-				{ answerText: 'Dublin', isCorrect: false },
+				{ answerText: 'Human', isCorrect: false },
+				{ answerText: 'Elf', isCorrect: false },
+				{ answerText: 'Dwarf', isCorrect: true },
+				{ answerText: 'Goblin', isCorrect: false },
 			],
 		},
 		{
-			questionText: 'Who is CEO of Tesla?',
+			questionText: 'Select your class',
 			answerOptions: [
-				{ answerText: 'Jeff Bezos', isCorrect: false },
-				{ answerText: 'Elon Musk', isCorrect: true },
-				{ answerText: 'Bill Gates', isCorrect: false },
-				{ answerText: 'Tony Stark', isCorrect: false },
-			],
-		},
-		{
-			questionText: 'The iPhone was created by which company?',
-			answerOptions: [
-				{ answerText: 'Apple', isCorrect: true },
-				{ answerText: 'Intel', isCorrect: false },
-				{ answerText: 'Amazon', isCorrect: false },
-				{ answerText: 'Microsoft', isCorrect: false },
-			],
-		},
-		{
-			questionText: 'How many Harry Potter books are there?',
-			answerOptions: [
-				{ answerText: '1', isCorrect: false },
-				{ answerText: '4', isCorrect: false },
-				{ answerText: '6', isCorrect: false },
-				{ answerText: '7', isCorrect: true },
+				{ answerText: 'Wizzard', isCorrect: false },
+				{ answerText: 'Warrior', isCorrect: true },
+				{ answerText: 'Archer', isCorrect: false },
+				{ answerText: 'Brawler', isCorrect: false },
+				{ answerText: 'Rogue', isCorrect: false },
 			],
 		},
 	];
@@ -66,7 +49,7 @@ export default function App() {
 				<>
 					<div className='question-section'>
 						<div className='question-count'>
-							<span>Question {currentQuestion + 1}</span>/{questions.length}
+							<span>Progress {currentQuestion + 1}</span>/{questions.length}
 						</div>
 						<div className='question-text'>{questions[currentQuestion].questionText}</div>
 					</div>
